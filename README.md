@@ -87,6 +87,7 @@ To access to an `HTML` element we can use `ref` attribute on React components. A
 With typescript we have to cast to the correct `HTMLElement` type like `HTMLInputElement` for the value attribute of an input.
 
 It makes it easier to get `DOM` access with react.
+
 ```jsx
 class MyComponent extends React.Component {
 
