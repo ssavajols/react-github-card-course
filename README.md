@@ -79,3 +79,29 @@ class MyUncontrolledComponent extends React.Component {
   }
 }
 ```
+
+### Ref and typescript casting
+
+To access to an `HTML` element we can use `ref` attribute on React components. All `ref` attributes of the component are referenced to `this.refs` property.
+
+With typescript we have to cast to the correct `HTMLElement` type like `HTMLInputElement` for the value attribute of an input.
+
+It makes it easier to get `DOM` access with react.
+```jsx
+class MyComponent extends React.Component {
+
+  ...
+
+  handleChange = (event) => {
+    this.setState({
+      search: (this.refs.username as HTMLInputElement).value
+    });
+  }
+
+  render() {
+    return  <input type="text"
+          ref="username"
+          placeholder="Search" />;
+  }
+}
+```
