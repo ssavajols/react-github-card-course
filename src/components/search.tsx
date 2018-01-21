@@ -26,13 +26,14 @@ export class Search extends React.Component {
 
   handleChange = (event) => {
     this.setState({
-      search: event.currentTarget.value
+      search: (this.refs.username as HTMLInputElement).value
     });
   }
 
   render() {
     return <form onSubmit={this.onSearch}>
       <input type="text"
+          ref="username"
           placeholder="Search"
           onChange={this.handleChange}
           value={this.state.search}
