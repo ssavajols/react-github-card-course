@@ -21,7 +21,7 @@ npm start
 
 Controlled components are components that are controlled by react to render data.
 
-Inputs can be controlled by react with the state attibutes and the state of the component can't differ from his DOM representation.
+Inputs can be controlled by react with the `state` attibutes and the state of the component can't differ from his `DOM` representation.
 
 If we bind the input value to a `state` property, the input value can only be updated by the component state update.
 
@@ -53,9 +53,9 @@ class MyControlledComponent extends React.Component {
 
 ### Uncontrolled components
 
-Uncontrolled components are components where the state can diverge from the DOM representation.
+Uncontrolled components are components where the `state` can diverge from the `DOM` representation.
 
-Like inputs with no value attribute set. The user can interact and change the input value without updating the component state.
+Like inputs with no value attribute setted. The user can interact and change the input value without updating the component `state`.
 
 ```jsx
 class MyUncontrolledComponent extends React.Component {
