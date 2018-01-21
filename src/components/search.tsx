@@ -32,10 +32,10 @@ export class Search extends React.Component {
 
   render() {
     return <form onSubmit={this.onSearch}>
-      <input type="text" 
-          placeholder='Search' 
-          onChange={this.handleChange} 
-          value={this.state.search} 
+      <input type="text"
+          placeholder="Search"
+          onChange={this.handleChange}
+          value={this.state.search}
           required />
       <input type="submit" value="Search" />
     </form>;
