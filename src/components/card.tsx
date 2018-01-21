@@ -5,14 +5,16 @@ export type ICardProps = {
   image: string;
   name: string;
   description: string;
+  url: string;
 }
 
 export function Card(props: ICardProps) {
-  return <div className='card' style={{width: '150px'}}>
+  return <div className='card' style={{width: '200px'}}>
       <img className="card-img-top" src={props.image} alt={props.name} />
       <div className="card-body">
-        <div className="card-title">{props.name}</div>
-        <div className="card-text">{props.description}</div>
+        <h2 className="card-title">{props.name}</h2>
+        <p className="card-text">{props.description}</p>
+        <a href={props.url} className="btn btn-primary">See it on github</a>
       </div>
     </div>;
 } 

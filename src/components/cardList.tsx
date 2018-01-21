@@ -12,7 +12,8 @@ export function CardList(props: ICardListProps) {
                 key={index}
                 image={card.image} 
                 name={card.name} 
-                description={card.description} />;
+                description={card.description}
+                url={card.url} />;
     })}
   </ul>;
 }  

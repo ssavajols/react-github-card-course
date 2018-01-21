@@ -19,6 +19,7 @@ export class GithubService {
             image: json.avatar_url,
             name: json.name,
             description: json.bio,
+            url: json.html_url
           });
         })
         .catch(reject);
