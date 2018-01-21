@@ -10,20 +10,33 @@ export type ISearchState = {
 
 export class Search extends React.Component {
 
+  static initialState = (): ISearchState => ({
+    search: ''
+  });
+
   props: ISearchProps;
+
+  state: ISearchState = Search.initialState();
 
   onSearch = (event) => {
     event.preventDefault();
+    this.setState(Search.initialState());
+    this.props.onSearch(this.state.search);
+  }
 
-    const input = this.refs.searchfield as any;
-    
-    this.props.onSearch(input.value);
-    input.value = '';
+  handleChange = (event) => {
+    this.setState({
+      search: event.currentTarget.value
+    });
   }
 
   render() {
     return <form onSubmit={this.onSearch}>
-      <input type="text" ref="searchfield" placeholder='Search' required />
+      <input type="text" 
+          placeholder='Search' 
+          onChange={this.handleChange} 
+          value={this.state.search} 
+          required />
       <input type="submit" value="Search" />
     </form>;
   }   
