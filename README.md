@@ -2,6 +2,7 @@
 
 React training course with github search card
 
+- React courses : [https://github.com/ssavajols/react-course](https://github.com/ssavajols/react-course)
 - Démonstration : [https://ssavajols.github.io/react-github-card-course/](https://ssavajols.github.io/react-github-card-course/)
 
 ## Install
